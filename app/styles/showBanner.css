@@ -1,0 +1,162 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 900px;
+  gap: 1rem;
+}
+
+.banner {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  overflow: hidden;
+}
+.banner-background {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.banner-content {
+  position: absolute;
+  top: 12%;
+  left: 3%;
+  width: 42%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.banner-description {
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    111.8deg,
+    rgb(0, 104, 155) 19.8%,
+    rgb(0, 173, 239) 92.1%
+  );
+}
+.bottom-right {
+  position: absolute;
+  height: 328px;
+  width: 328px;
+  bottom: -40px;
+  right: -80px;
+  border-radius: 50%;
+}
+.banner-cta {
+  position: absolute;
+}
+.mid {
+  position: absolute;
+  height: 175px;
+  width: 317px;
+  bottom: 80px;
+  right: 62px;
+}
+
+.banner-title {
+  position: absolute;
+  font-size: 22px;
+}
+.banner-description {
+  position: absolute;
+  font-size: 15px;
+}
+
+.banner button {
+  padding: 12px 38px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+}
+
+.right-mid {
+  position: absolute;
+  height: 220px;
+  width: 200px;
+  border-radius: 50%;
+  bottom: 120px;
+  right: 70px;
+}
+
+.left-mid {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  bottom: 35px;
+  left: 30px;
+}
+
+.shield {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  clip-path: polygon(
+    52% 11%,
+    91% 30%,
+    91% 55%,
+    81% 72%,
+    52% 95%,
+    23% 72%,
+    13% 54%,
+    14% 29%
+  );
+  bottom: 95px;
+  right: -6px;
+}
+
+.bottom-square {
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  bottom: 20px;
+  right: 20px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  visibility: hid;
+}
+
+.bottom-circle {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  bottom: 45px;
+  right: 45px;
+}
+
+.top {
+  position: absolute;
+  width: 450px;
+  height: 230px;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+/* Edit Symbol */
+
+.edit-symbol {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 10;
+}
+
+.edit-symbol:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.edit-symbol svg {
+  display: block;
+}
