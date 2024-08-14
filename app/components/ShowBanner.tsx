@@ -1,6 +1,9 @@
-import "../styles/showBanner.css";
+"use client";
+import "../styles/banner.css";
 import React from "react";
 import Image from "next/image";
+import EditBanner from "./EditBanner";
+import { useState } from "react";
 
 interface Title {
   text: string;
@@ -30,20 +33,30 @@ interface bannerImage {
 
 interface BannerShowProps {
   banner: {
-    id: string;
+    id: number;
     title: Title;
     description: Description;
     CTA: Button;
     background: string;
     image: bannerImage;
-    fontColor?: string;
   };
+  checkEdit: (showEdit: boolean, id: number) => void;
 }
 
-const ShowBanner: React.FC<BannerShowProps> = ({ banner }) => {
+const ShowBanner: React.FC<BannerShowProps> = ({ banner, checkEdit }) => {
+  const [showEdit, setShowEdit] = useState(false);
+
+  const handleClick = () => {
+    setShowEdit(!showEdit);
+  };
+
+  if (showEdit) {
+    checkEdit(showEdit, banner.id);
+  }
+
   return (
     <div className="banner">
-      <div className="edit-symbol">
+      <div className="edit-symbol" onClick={handleClick}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
